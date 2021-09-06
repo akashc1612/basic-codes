@@ -42,11 +42,17 @@ void print(Node *head)
         temp=temp->next;
     }
 }
-void insertnode(Node *head,int i,int number)
+Node * insertnode(Node *head,int i,int number)
 {
     int count=0;
     Node *temp=head;
     Node *newnode=new Node(number);
+    if(i==0)
+    {
+        newnode->next=head;
+        head=newnode;
+        return head
+    }
     while(temp!=NULL and count<i-1)
     {
         temp=temp->next;
@@ -65,7 +71,7 @@ int main()
     cin>>i;
     cout<<"Enter the number to be inserted at ith position"<<endl;
     cin>>number;
-    insertnode(head,i,number);
+    head=insertnode(head,i,number);
     print(head);
     return 0;
 }
