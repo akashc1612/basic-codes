@@ -1,4 +1,5 @@
 int largest=INT_MIN,secondlargest=INT_MIN;
+{
     if(size<=1)
     {
         return INT_MIN;
