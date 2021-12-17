@@ -1,0 +1,44 @@
+//creating vectors
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+vector <int> v;  //statically
+vector<int> *v=new vector<int>()  //dynamically
+}
+
+[]-> Should be used only for updation / get of data and not for insertion of data
+
+//inserting values in a vector
+
+int main()
+{
+vector <int>v;
+v.push_back(10);
+v.push_back(20);
+v.push_back(30);
+v.push_back(10);
+v.push_back(20);
+v.push_back(30);
+
+//accessing data
+cout<<v[0]<<v[1]<<v[2]<<endl;
+cout<<v[11]<<endl  -->this will also print an output whether ew have stored any data in the location or not
+
+//for getting size of vector
+cout<<"Size of vector"<<v.size()<<endl;
+
+//accessing data using at()
+
+cout<<v.at(2)<<endl;
+cout<<v.at(11)<<endl; -->this will throw an error
+
+//deleting element
+ v.pop_back()
+
+//finding the capacity of array
+v.capacity()
+
+}
