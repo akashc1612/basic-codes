@@ -1,0 +1,39 @@
+//stacks using stl
+#include<stack>
+#include<iostream>
+using namespace std;
+int main()
+{
+//making
+ stack<int>s1;
+//pushing values in a stack
+//return type is void
+s1.push(10);
+s1.push(20);
+for(int i=0;i<10;i++)
+{
+  s1.push(i+1);
+}
+//poping values in a stack
+//return type is void here
+s1.pop();
+
+cout<<s1.pop();  ---> will not show any output
+
+//for printing the topmost element in a stack
+//return type can be int,char,float,etc
+cout<<s1.top();
+
+//deleting an element and printing the deleted element
+cout<<s1.top();
+s1.pop(); 
+
+//for geting the size of the stack
+//return type is int
+cout<<s1.size();
+
+//for checking whether stack is empty or not
+//return type is boolean
+cout<<s1.empty();
+//returns 1 if stack is empty otherwise 0
+}
