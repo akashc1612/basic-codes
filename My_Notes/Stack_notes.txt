@@ -15,7 +15,7 @@ for(int i=0;i<10;i++)
   s1.push(i+1);
 }
 //poping values in a stack
-//return type is void here
+//return type is void 
 s1.pop();
 
 cout<<s1.pop();  ---> will not show any output
