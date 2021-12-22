@@ -25,7 +25,7 @@ v.push_back(30);
 
 //accessing data
 cout<<v[0]<<v[1]<<v[2]<<endl;
-cout<<v[11]<<endl  -->this will also print an output whether ew have stored any data in the location or not
+cout<<v[11]<<endl  -->this will also print an output whether we have stored any data in the location or not
 
 //for getting size of vector
 cout<<"Size of vector"<<v.size()<<endl;
@@ -36,9 +36,12 @@ cout<<v.at(2)<<endl;
 cout<<v.at(11)<<endl; -->this will throw an error
 
 //deleting element
- v.pop_back()
+ v.pop_back();
 
 //finding the capacity of array
-v.capacity()
+v.capacity();
+
+//for finding the size of current vector
+v.size();
 
 }
