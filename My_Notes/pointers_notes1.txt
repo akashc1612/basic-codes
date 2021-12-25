@@ -1,0 +1,51 @@
+//pointers
+What are pointers?
+Pointers are variables that stores the address of another variable/s
+#include<iostream>
+using namespace std;
+int main()
+{
+int i=10;     // 10 is stored in i
+ &i           //gives the address of i
+int * b= &i   // b stores the address of i
+
+//as i was integer type hence we created a pointer variable of int type
+//it reads as .. b is a pointer to an integer(int)
+
+//eg
+
+float f=10.2;
+float*f2=&f;
+
+char a='a';
+char *a2=&a;
+
+double p=10.9999;
+double*p2=&p;
+
+//if you want to access the value pointed by the pointer variable b
+//we use dereference operator
+
+cout<<*b;   //prints the value as 10 (as i=10 )
+            // * is called the dereference operator
+
+int o=i  //10 will be stored in variable o
+int o=*b //" " " " 
+
+//we can treat *p just like integer
+
+ *p=19;    //changes the value of i to 19
+(*p)++    //changes the value of i to 20
+
+//safe practices of initialising a pointer 
+int * p=0    // pointer points to NULL
+int *p= &i   // pointer points to i
+int *p      //unsafe practice
+
+/* in case 3 *p can access a location and manipulate its value as well by using dereference operator
+   this is very dangerous as we dont have the authority of that particular memory location */
+
+// we should never try to initialise pointers in this way
+
+}
+
