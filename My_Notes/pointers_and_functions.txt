@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void dummy(int *arr,int size)
+{
+     cout<<sizeof(arr);   //here size will be printed as 8
+                          //it is so because in functions copy of address of array passed is stored in a pointer variable named arr
+                          
+}
+int main()
+{
+int arr[100];
+cout<<sizeof(arr);     //here size will be printed as 400
+
+dummy(arr,100);
+
+}
