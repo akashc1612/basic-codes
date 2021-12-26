@@ -1,0 +1,40 @@
+//POINTER ARITHMETIC
+#include<iostream>
+using namespace std;
+int main()
+{
+
+int *i=&a;
+i++;
+
+cout<<i; //the pointer shifts to new integer ... i.e.,let the pointer pointing to memory loc 1024
+         // after arithmetic the pointer gets incremented with 4 bytes since its an integer pointer
+         //now the pointer points to 1028
+
+cout<<*i ;  //the pointer prints the value pointed at 1028 memort location
+
+//pointer arithmetic is useful for arrays as memory is continuous in arrays
+
+ int a[10];
+    
+ cout<<a<<' '<<&a<<' '<<&a[0];     //the address printed will be same here i.e., address of pointer a
+
+a[0]=5;
+a[1]=10;
+
+cout<<*a      //5 will be printed as output
+cout<<*(a+1)  //10 will be printed as output
+
+   // Here *(a+1) effictively evaluates as a[1]
+   //a is 1024(say) therefore a+1 is 1028 as a is an integer pointer
+
+//we can write arrays as 
+
+
+cout<<a[8];
+cout<<*(8+a);         //all the 3 will give the same output         
+cout<<8[a];
+ 
+// *(a+i)==a[i]==i[a] 
+
+}
