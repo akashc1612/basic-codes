@@ -1,0 +1,61 @@
+//Dynamic memory allocation 
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  new int // to create memory in heap
+  int *p=new int //to update / use the memory created in heap we store the address of memory created in a pointer
+  
+  //Here 8 bytes will be consumed in stack memory(*p) and 4 bytes will be consumed on the heap(int)
+  
+//declaring arrays in heap memory
+
+  new int[100]; //allocates an array of 400 size in heap memory;
+  int *i=new int[100];  //i has the address of the head of the array 
+ 
+//array exceptions
+
+//when we create an array we need to have the constant size at the point of declaration of array
+
+//i.e., we should notgive the size at time of compilation
+
+int n;
+cin>>n;
+int arr[n];  //This is not accepted in c++ since we are defining n at the time of compilation
+
+//IN CASE OF DYNAMIC ARRAYS
+
+int n;
+cin>>n;
+int *q=new int[n];  //THIS IS ACCEPTABLE AS THE MEMORY IS CREATED IN HEAP AND WE CAN DECIDE THE SIZE OF ARRAY IN RUN TIME
+
+//TAKING INPUT IN DYNAMIC ARRAYS
+
+//IT IS SAME AS IN STATIC ARRAYS
+
+for(int i=0;i<100;i++)
+{
+cin>>q[i];
+}
+
+
+// Diffrence b/w static and dynamic memory
+
+1.static memory is small
+2.Static memory gets deleted when its scope ends                                   //Manual release of memory is required in dynamic memory allocation
+
+//Whenever we create a memory dynamically we need to delete it also as it never gets deleted internally
+//SYNTAX
+
+int *p=new int[50];
+delete []p;            //delete keyword clears the memory location stored in p and hence heap memory gets deleted here pointer variable doesnt gets deleted 
+                     //p will exhaust once its scope is terminated
+
+//For single integer
+int *q=new int;
+delete q;           //deletes the memory location pointed by variable q 
+
+
+  
