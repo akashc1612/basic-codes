@@ -1,0 +1,30 @@
+//CHARACTER POINTERS
+
+//THEY WORK VERY DIFFERENTLY WHEN COMPARED TO INTEGER,FLOAT,DOUBLE POINTERS AS COUT AND CIN IS IMPLEMENTED DIFFERENTLY IN CASE OF CHARACTER ARRAYS
+ 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+char a='a';
+    
+char *b=&a;
+    
+cout<<b;        // Here instead of printing address of b, the compiler prints character 'a' followed by some garbage characters 
+cout<<*b;       // character 'a' will be printed
+
+//For arrays
+
+char arr[10]="akshat";
+     
+cout<<arr<<' '<<&arr[0];     //Here akshat will be printed twice
+
+
+//eg
+char arr2[10]="jain"
+char * p=&arr2[0];
+cout<<p;                //Here jain will be printed
+
+}
