@@ -64,5 +64,5 @@ TreeNode<int>* takeInputLevelWise() {
 
 int main() {
     TreeNode<int>* root = takeInputLevelWise();
-    cout << getHeight(root);
+    cout << maxDataNode(root)->data;
 }
