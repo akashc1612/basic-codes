@@ -13,7 +13,7 @@ void printSubstrings(char str[]){
                 cout<<str[k];
                 k++;
             }
-            cout<<endl;
+            cout<<"\n";
         }
     }
     
