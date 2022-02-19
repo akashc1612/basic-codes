@@ -18,6 +18,14 @@ int main()
           cout<<"Key:"<<it->first<<"  "<<"Value:"<<it->second<<endl; //it->first gives key ; it->second gives value 
               it++;                                                       //corresponding to key
       }
+      //Find function 
+       unordered_map<string,int>::iterator it2=ourmap.find("abc")
+       //returns the pointer at which abc is present 
+
+       //erase using iterator
+       ourmap.erase(it2); //deletes the key and value pointed by iterator it2
+       ourmap.erase(it2,it2+4) //deletes ,, ,, ,, it2,it2+1,it2+2,it2+3)
+
     return 0;
 }
 
